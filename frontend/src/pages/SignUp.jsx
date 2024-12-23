@@ -4,8 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import logo from "../images/logo.svg";
 import image from "../images/authPageSide.png";
 import { api_base_url } from "../helper";
-import Lottie from "react-lottie"; // Import Lottie
-import Loading from "../images/loading.json"; // Lottie animation JSON file
 
 
 const SignUp = () => {
@@ -14,26 +12,7 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const navigate = useNavigate();
-  const [loading, setLoading] = useState(true); // Loading state
-  
-  const options = {
-    animationData: Loading,
-    loop: true,
-    autoplay: true, // Auto play the animation
-  };
-
-  useEffect(() => {
-    // Simulating a loading period before displaying routes
-    setTimeout(() => setLoading(false), 4000); // Adjust the timeout as needed
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="loading-container h-[100vh] flex items-center justify-center">
-        <Lottie options={options} height={400} width={400} />
-      </div>
-    );
-  }
+ 
 
   const validatePassword = (password) => {
     const errors = [];

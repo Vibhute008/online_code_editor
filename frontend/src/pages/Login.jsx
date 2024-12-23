@@ -1,9 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from "../images/logo.svg"
 import { Link, useNavigate } from 'react-router-dom';
 import image from "../images/authPageSide.png";
 import { api_base_url } from '../helper';
 import { toast } from 'react-toastify';
+import Lottie from "react-lottie"; // Import Lottie
+import Loading from "../images/loading.json"; // Lottie animation JSON file
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -12,6 +14,27 @@ const Login = () => {
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
+
+  const [loading, setLoading] = useState(true); // Loading state
+  
+  const options = {
+    animationData: Loading,
+    loop: true,
+    autoplay: true, // Auto play the animation
+  };
+
+  useEffect(() => {
+    // Simulating a loading period before displaying routes
+    setTimeout(() => setLoading(false), 4000); // Adjust the timeout as needed
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="loading-container h-[100vh] flex items-center justify-center">
+        <Lottie options={options} height={400} width={400} />
+      </div>
+    );
+  }
 
   const submitForm = (e) => {
     e.preventDefault();
