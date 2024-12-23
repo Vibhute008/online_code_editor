@@ -1,0 +1,163 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #0D0C0C;
+  color: #fff;
+  overflow-x: hidden;
+}
+html{
+  overflow-x: hidden;
+}
+.inputBox{
+  width: 100%;
+  background-color: #141414;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.inputBox input{
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+}
+
+.btnBlue{
+  background-color: #00AEEF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-size: 16px;
+}
+.btnBlue:hover{
+  background-color: #0086b3;
+}
+.grid{
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px;
+}
+
+.lightMode{
+  background-color: #fff !important;
+  color: #000 !important;
+};
+
+.lightMode .menu{
+  color: #000;
+}
+
+.lightMode .list{
+  background-color: #fff;
+  color: #000;
+}
+
+
+.lightMode .navbar{
+  background-color: #fff;
+}
+
+.lightMode .cards{
+  background-color: #fff;
+  color: #000;
+}
+
+.lightMode .card{
+  background-color: #f4f4f4ff;
+  color: #000;
+}
+
+.lightMode .card:hover{
+  background-color: #e4e4e4;
+  color: #000;
+}
+
+.lightMode .inputBox input{
+  background-color: #f4f4f4ff;
+}
+
+.lightMode .inputBox input{
+  color: #000;
+} 
+
+.lightMode .createModel{
+  background-color: #f4f4f4ff;
+  color: #000;
+}
+
+.lightMode .mainModel{
+  background-color: #f4f4f4ff;
+  color: #000;
+}
+
+.lightMode .dropDownNavbar{
+  background-color: #f4f4f4ff;
+  color: #000;
+}
+
+.lightMode .tabs{
+  background-color: #f7f7f7;
+}
+.lightMode .tabs .tab{
+  background-color: #c2c1c1;
+  color: #000;
+}
+
+.lightMode .btn{
+  background-color: #C2C1C1;
+  color: #000;
+}
+
+.menu {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+  padding-bottom: 5px; /* Space for the underline */
+  transition: color 0.3s ease;
+}
+
+.lightMode .menu{
+  color: #000;
+}
+
+.menu:hover {
+  color: #00aeef;
+}
+
+.active-link {
+  color: #00aeef;
+}
+
+.active-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #00aeef;
+  animation: underline 0.4s ease forwards;
+}
+
+@keyframes underline {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

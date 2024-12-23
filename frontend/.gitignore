@@ -1,0 +1,45 @@
+# Node.js
+node_modules/
+dist/
+
+# Logs
+*.log
+
+# Dependency directories
+jspm_packages/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+*.swo
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Vite
+.vite
+.vite_cache/
+
+# Environment files
+.env
+.env.local
+.env.*
+
+# Yarn
+.yarn/
+.pnp.*
+
+# Other
+*.tar.gz
+*.zip
+*.tgz
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Testing
+coverage/
