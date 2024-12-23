@@ -1,0 +1,51 @@
+# Node.js
+node_modules/
+dist/
+
+# Logs
+*.log
+logs/
+
+# Dependency directories
+jspm_packages/
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+*.swo
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*
+
+# Build files
+/build/
+/public/
+
+# Yarn
+.yarn/
+.pnp.*
+
+# Other
+*.tar.gz
+*.zip
+*.tgz
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+
+# Testing
+coverage/
+.nyc_output/
+
+# PM2
+pm2.log
+pm2.pid
