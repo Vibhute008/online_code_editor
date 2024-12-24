@@ -40,8 +40,13 @@ const EditorNavbar = () => {
 
   return (
     <div className="EditiorNavbar flex items-center justify-between px-[100px] h-[80px] bg-[#141414]">
-      <div className="logo" onClick={() => navigate("/")}>
-        <img className="w-[210px] cursor-pointer" src={logo} alt="Logo" />
+      <div className="logo pt-[27px]">
+        <img
+        onClick={() => navigate("/dashboard")}
+          className="w-[210px] h-[80px] cursor-pointer"
+          src={logo}
+          alt="Logo"
+        />
       </div>
       <p>
         File / <span className="text-[gray]">{projectTitle}</span>

@@ -54,7 +54,12 @@ const Navbar = ({ isGridLayout, setIsGridLayout }) => {
   return (
     <div className="navbar fixed top-0 left-0 w-full h-[80px] z-50 flex items-center justify-between px-[100px] bg-[#141414] text-white shadow-md">
       <div className="logo pt-[27px]">
-        <img className="w-[210px] h-[80px] cursor-pointer" src={logo} alt="Logo" />
+        <img
+          onClick={() => navigate("/dashboard")}
+          className="w-[210px] h-[80px] cursor-pointer"
+          src={logo}
+          alt="Logo"
+        />
       </div>
       <div className="links flex items-center gap-6 text-lg font-semibold">
         <NavLink
@@ -104,29 +109,29 @@ const Navbar = ({ isGridLayout, setIsGridLayout }) => {
         />
       </div>
       <div className="dropDownNavbar hidden absolute right-[60px] top-[80px] shadow-lg shadow-black/50 p-[10px] rounded-lg bg-[#1A1919] w-[150px] h-[160px]">
-          <div className="py-[10px] border-b-[1px] border-b-[#fff]">
-            <h3 className="text-[17px]" style={{ lineHeight: 1 }}>
-              {data ? data.name : ""}
-            </h3>
-          </div>
-          <i
-            className="flex items-center gap-2 mt-3 mb-2 cursor-pointer"
-            onClick={changeTheme}
-            style={{ fontStyle: "normal" }}
-          >
-            {" "}
-            <MdLightMode className="text-[20px]" /> Light mode
-          </i>
-          <i
-            onClick={() => setIsGridLayout(!isGridLayout)}
-            className="flex items-center gap-2 mt-3 mb-2 cursor-pointer"
-            style={{ fontStyle: "normal" }}
-          >
-            <BsGridFill className="text-[20px]" />{" "}
-            {isGridLayout ? "List" : "Grid"} layout
-          </i>
+        <div className="py-[10px] border-b-[1px] border-b-[#fff]">
+          <h3 className="text-[17px]" style={{ lineHeight: 1 }}>
+            {data ? data.name : ""}
+          </h3>
         </div>
+        <i
+          className="flex items-center gap-2 mt-3 mb-2 cursor-pointer"
+          onClick={changeTheme}
+          style={{ fontStyle: "normal" }}
+        >
+          {" "}
+          <MdLightMode className="text-[20px]" /> Light mode
+        </i>
+        <i
+          onClick={() => setIsGridLayout(!isGridLayout)}
+          className="flex items-center gap-2 mt-3 mb-2 cursor-pointer"
+          style={{ fontStyle: "normal" }}
+        >
+          <BsGridFill className="text-[20px]" />{" "}
+          {isGridLayout ? "List" : "Grid"} layout
+        </i>
       </div>
+    </div>
   );
 };
 
