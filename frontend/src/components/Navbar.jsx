@@ -55,7 +55,7 @@ const Navbar = ({ isGridLayout, setIsGridLayout }) => {
     <div className="navbar fixed top-0 left-0 w-full h-[80px] z-50 flex items-center justify-between px-[100px] bg-[#141414] text-white shadow-md">
       <div className="logo pt-[27px]">
         <img
-          onClick={() => navigate("/dashboard")}
+          onClick={() => navigate("/")}
           className="w-[210px] h-[80px] cursor-pointer"
           src={logo}
           alt="Logo"
